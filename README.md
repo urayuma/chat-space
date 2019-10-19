@@ -32,8 +32,10 @@ Things you may want to cover:
 |name|string||
 |email|string||
 |passwoed|string||
-|message_id|integer||
 |group_id|integer||
+[](
+  message_idを削除しました。
+)
 
 ### Association
 - has_many :messages
