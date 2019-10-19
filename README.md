@@ -35,6 +35,7 @@ Things you may want to cover:
 |group_id|integer||
 [](
   message_idを削除しました。
+  group_idを削除しました。
 )
 
 ### Association
@@ -55,7 +56,6 @@ Things you may want to cover:
 - belongs_to :group
 
 ## groupテーブル
-
 
 |Column|Type|Options|
 |------|----|-------|
