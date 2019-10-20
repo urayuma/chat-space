@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 20191019123502) do
   end
 
   create_table "users_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "users_id"
-    t.integer  "groups_id"
+    t.integer  "users_id",   null: false
+    t.integer  "groups_id",  null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
