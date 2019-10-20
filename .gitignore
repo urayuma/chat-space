@@ -17,5 +17,3 @@
 .byebug_history
 public/uploads/*
 .DS_Store
-app/.DS_Store
-db/.DS_Store
