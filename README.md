@@ -29,18 +29,13 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string||
+|name|string|null: false|
 |email|string||
 |passwoed|string||
-|group_id|integer||
-[](
-  message_idを削除しました。
-  group_idを削除しました。
-)
 
 ### Association
 - has_many :messages
-- has_many :groups, though: :user_groups
+- has_many :groups, though: :users_groups
 
 ## messagesテーブル
 
@@ -48,8 +43,8 @@ Things you may want to cover:
 |------|----|-------|
 |body|text||
 |image|string||
-|user_id|integer||
-|group_id|integer||
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -60,19 +55,17 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string||
-|user_id|integer||
-|message_id|integer||
 
 ### Association
-- has_many :users, through: :user_groups
+- has_many :users, through: :users_groups
 - has_many :messages
 
 ## user_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|users_id|integer||
-|groups_id|integer||
+|users_id|integer|foreign_key: true|
+|groups_id|integer|foreign_key: true|
 
 ### Association
 - belongs_to :user
