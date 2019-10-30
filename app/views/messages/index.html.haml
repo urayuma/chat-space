@@ -15,7 +15,8 @@
             = n.name
       .right-header
         .right-header__button
-          Edit
+          = link_to edit_group_path(params[:group_id]) do
+            Edit
     .messages
       = render partial: 'message', collection: @messages
     .form
